@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>TriviaGame</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
+	<link rel="stylesheet" href="assets/css/style.css">
+  
+
+</head>
+<body>
+<body>
+  
+
+  <div class="container">
+   <div id="row">
+
+  <h1 class="quizHeader"><center>Totally Trivial Trivia!</center></h1>
+	<table style="width:900px">
+	 <h2 id="timer">Time Remaining:</h2>
+
+     <div id="clockdiv">Seconds</div>
+        
+ 
+	  	<div>
+	  		<p class="question">1. What was the first billionaire in the United States?</p>
+
+	    	<ul>
+	    	<input class="answer" type="radio" name="q1" value="1">
+	        <label id="correctString1">John D. Rockefeller</label>
+	    	<br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>Bill Gates</label>
+	        <br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>Mark Zucherberg</label>
+	        <br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>Michael Bloomberg</label>
+    		</ul>
+	  	</div>
+	 
+	
+	  	<div>
+	  		<p class="question">2. What is the most popular breed of dog in the United States?</p>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q2" value="0">
+	        <label>Poodle</label>
+	        <br>
+	        <input class="answer" type="radio" name="q2" value="1">
+	        <label id="correctString2">Labrador Retriever</label>
+	        <br>
+	        <input class="answer" type="radio" name="q2" value="0">
+	        <label>Bulldog</label>
+	        <br>
+	        <input class="answer" type="radio" name="q2" value="0">
+	        <label>Beagle</label>
+	    	</ul>
+	  	</div>
+	 
+	
+	 	 <div>
+	  		<p class="question">3. What did the famous Hollywood sign, located in Los Angeles, originally say?</p>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q3" value="0">
+	        <label>Hollyweed</label>
+	        <br>
+	        <input class="answer" type="radio" name="q3" value="1">
+	        <label id="correctString3">Hollywoodland</label>
+	        <br>
+	        <input class="answer" type="radio" name="q3" value="0">
+	        <label>Hollymolly</label>
+	        <br>
+	        <input class="answer" type="radio" name="q3" value="0">
+	        <label>Hollywoodmont</label>
+	    	</ul>
+		</div>
+	 
+	 
+	  	<div>
+	  		<p class="question">4. What is the capital of the Republic of Ireland?</p>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>London</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="1">
+	        <label id="correctString4">Dublin</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>Paris</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>Madrid</label>
+    		</ul>
+	  	</div>
+
+	     <div>
+	     <p class="question">5. CERN launched the very first website in what year?</p>
+
+	        <ul>
+	    	<input class="answer" type="radio" name="q5" value="1">
+	        <label id="correctString5">1990</label>
+	    	<br>
+	        <input class="answer" type="radio" name="q5" value="0">
+	        <label>1985</label>
+	        <br>
+	        <input class="answer" type="radio" name="q5" value="0">
+	        <label>1997</label>
+	        <br>
+	        <input class="answer" type="radio" name="q5" value="0">
+	        <label>2003</label>
+    		</ul>
+	  	</div>
+
+	  	<div>
+	  		<p class="question">6. What is the name of Atlanta's major league baseball team?</p>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q6" value="0">
+	        <label>Atlanta Bobcats</label>
+	        <br>
+	        <input class="answer" type="radio" name="q6" value="0">
+	        <label>Atlanta Hawks</label>
+	        <br>
+	        <input class="answer" type="radio" name="q6" value="1">
+	        <label id="correctString6">Atlanta Braves</label>
+	        <br>
+	        <input class="answer" type="radio" name="q6" value="0">
+	        <label>Atlanta Eagles</label>
+    		</ul>
+	  	</div>
+	  	<div>
+	  		<p class="question">7. Who was the firs man to set foot on the moon?</p>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q7" value="0">
+	        <label>Yuri Gagarin</label>
+	        <br>
+	        <input class="answer" type="radio" name="q7" value="1">
+	        <label>Alan Shepard</label>
+	        <br>
+	        <input class="answer" type="radio" name="q7" value="0">
+	        <label>David Scott</label>
+	        <br>
+	        <input class="answer" type="radio" name="q7" value="1">
+	        <label id="correctString7">Neil Armstrong</label>
+	    	</ul>
+		</div>
+	</table>
+	</div>
+	
+<br>
+
+    <div class="submitter">
+         <input class="quizSubmit" id="submitButton" onClick="submitQuiz()"
+          type="submit" value="Submit" />
+    </div>
+  
+<!--show only wrong answers on submit-->
+
+    <div class="quizAnswers" id="correctAnswer1"></div>
+    <div class="quizAnswers" id="correctAnswer2"></div>
+    <div class="quizAnswers" id="correctAnswer3"></div>
+    <div class="quizAnswers" id="correctAnswer4"></div>
+    <div class="quizAnswers" id="correctAnswer5"></div>
+    <div class="quizAnswers" id="correctAnswer6"></div>
+    <div class="quizAnswers" id="correctAnswer7"></div>
+<!--show score upon submit-->
+    <div>
+    	<h2 class="quizScore" id="userScore"></h2>
+    </div>
+	</div>
+	</div>
+	
+
+
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="assets/javascript/add.js"></script>
+
+
+</body>
+</html>
